@@ -1,0 +1,165 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inknut Antiqua", serif;
+}
+
+header {
+   
+    width: 100%;
+}
+
+/* Navegacion */
+
+.logo-barber {
+    width: 90px;
+    height: 80px;
+}
+
+.nav-content{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 30%;
+    align-items: center;
+    text-transform: capitalize;
+    background-color: #130f0f28;
+    position: absolute;
+}
+
+.nav-content .nav-bar {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+  
+.nav-content .nav-bar li a {
+    text-decoration: none;
+    color: #fff;
+    margin: 20px;
+    font-size: 20px;
+    transition: 1.2s ease-in-out;
+  }
+ 
+.nav-content .nav-bar li a:hover {
+    color: #F9B012;
+    border-bottom: solid 2px #F9B012;
+}
+
+/* Main */
+
+.container-main {
+background: url(./img/1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-main {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-main.show { 
+    display: flex; 
+ }
+
+.text-main {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    width: 550px;
+    margin-right: 130%;
+    margin-top: 90px;
+}
+
+.text-main span {
+    color: #F9B012;
+}
+
+
+.btn-agenda {
+    margin-right: 135%;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #F9B012;
+    cursor: pointer;
+    transition: 1.3s ease-in-out;
+}
+
+.btn-agenda:hover {
+    background: #f8d78f;
+}
+
+.discont {
+    margin-top: 40px;
+    margin-left: 170%;
+    width: 230px;
+    height: 130px;
+    background: #F9B012;
+    border-radius: 50px;
+}
+
+.discont .discont-service {
+    margin-left: 70px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Section about */
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about {
+  background: url(./img/Barbearia\ -\ Melhor\ atendimento.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position-y: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icone-barber {
+    width: 50px;
+}
+
+.content-about {
+    width: 800;
+    margin-right: 40%;
+    margin-top: 40px;
+}
+
+.text-about {
+    width: 500px;
+    color: #F9B012;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.text-information {
+    color: #fff;
+    width: 600px;
+    
+}
