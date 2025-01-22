@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Barber- A melhor da Região</title>
 </head>
@@ -17,9 +19,12 @@
                     <li>
                         <a href="#Home">Home</a>
                         <a href="#about">Sobre</a>
-                        <a href="">Serviço</a>
+                        <a href="#service">Serviço</a>
                         <a href="">Contato</a>
                     </li>
+                    <img class="nav-icone" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp--v1" />
+                    <img class="nav-icone" src="https://img.icons8.com/color/48/instagram-new.png"
+                        alt="instagram-new" />
                 </ul>
             </nav>
         </div>
@@ -30,22 +35,17 @@
             <div class="content-main">
                 <h2 class="text-main">Homem Também
                     <span>Cuida do Visual </span>
-                    Agende seu conte de cabelo com a gente
+                    Agende seu conte de cabelo com a gente.. <span> Barbearia Show..💈</span>
                 </h2>
-                <button class="btn-agenda">Agende Seu Horário.!</button>
-
-                <div class="discont">
-                    <p class="discont-service">30% Desconto</p>
-                </div>
+                <button class="btn-agenda" onclick="openModal()">Agende Seu Horário.!</button>
             </div>
         </div>
     </main>
 
-    <section>
+    <section class="container-about">
         <div id="about" class="about">
             <div class="content-about">
-                <h3 class="text-about"> A melhor Barberia da
-                    região, a 5 anos cuidando do seu visual..✂️💈</h3>
+                <h3 class="text-about"> <span>Barbearia Show</span>, a 5 anos cuidando do seu visual..✂️💈</h3>
                 <p class="text-information">Temos o prazer de cuidar do seu
                     visual.
                     Nossa missão é proporcionar a melhor experiência em cuidados masculinos, com um atendimento
@@ -53,13 +53,121 @@
                     barba muito cuidado.
                     Nosso ambiente acolhedor e descontraído é perfeito para você relaxar e desfrutar de um momento só
                     seu.
-                    Venha conhecer a nossa barbearia que é referência na região e descubra por que somos a escolha certa para
+                    Venha conhecer a nossa barbearia que é referência na região e descubra por que somos a escolha certa
+                    para
                     cuidar do seu visual.</p>
+            </div>
+            <button id="backToTop" title="Voltar ao topo">↑ Home</button>
+        </div>
+    </section>
+
+    <section class="Service">
+        <h2 id="service">Conheça nossos serviços</h2>
+        <div class="Card-service">
+            <div class="card">
+                <img height="230px" class="card-img-top" src="./img/1.png" alt="Corte-Barba">
+                <div class="card-body">
+                    <p class="card-text">Cuidamos da sua Barba com toda atenção e carinho.!</p>
+                    <button type="button" class="btn btn-warning">Visitar</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img height="230px" class="card-img-top" src="./img/barba-01.webp" alt="Corte-Barba">
+                <div class="card-body">
+                    <p class="card-text">Cuidamos da sua Barba com toda atenção e carinho.!</p>
+                    <button type="button" class="btn btn-warning">Visitar</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img height="230px" class="card-img-top" src="./img/barba-02.jpg" alt="Corte-Barba">
+                <div class="card-body">
+                    <p class="card-text">Cuidamos da sua Barba com toda atenção e carinho.!</p>
+                    <button type="button" class="btn btn-warning">Visitar</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img height="230px" class="card-img-top" src="./img/corte-01.jpg" alt="Corte-Cabelo">
+                <div class="card-body">
+                    <p class="card-text">Aquele estilo e cuidado com seu cabelo que você vai adorar.!</p>
+                    <button type="button" class="btn btn-warning">Visitar</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img height="230px" class="card-img-top" src="./img/corte-02.jpeg" alt="Corte-Cabelo">
+                <div class="card-body">
+                    <p class="card-text">Aquele estilo e cuidado com seu cabelo que você vai adorar.!</p>
+                    <button type="button" class="btn btn-warning">Visitar</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img height="230px" class="card-img-top" src="./img/corte-03.jpg" alt="Corte-Cabelo">
+                <div class="card-body">
+                    <p class="card-text">Aquele estilo e cuidado com seu cabelo que você vai adorar.!</p>
+                    <button type="button" class="btn btn-warning">Visitar</button>
+                </div>
             </div>
         </div>
     </section>
+
+    <section class="contact">
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Agendar Horário</h2>
+                <form id="bookingForm">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="date">Data:</label>
+                    <input type="date" id="date" name="date" required>
+                    <label for="time">Hora:</label>
+                    <input type="time" id="time" name="time" required>
+                    <button class="agenda" type="submit">Agendar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="contatos" id="contatos">
+        <h2>Contatos</h2>
+        <div class="contatos-secao">
+            <div class="telefone">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-telephone" viewBox="0 0 16 16">
+                    <path
+                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                </svg>
+                <span>(11) 96671-6788</span>
+            </div>
+            <div class="email">
+                <img src="https://img.icons8.com/ios/50/new-post.png" alt="new-post"/>
+                <p>barbeariashow@email.com</p>
+            </div>
+            <div class="redes-social">
+                <img class="nav-icone" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp--v1" />
+                <img class="nav-icone" src="https://img.icons8.com/color/48/instagram-new.png"
+                    alt="instagram-new" />
+            </div>
+        </div>
+    </section>
+
 </body>
 
 <script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 
 </html>
