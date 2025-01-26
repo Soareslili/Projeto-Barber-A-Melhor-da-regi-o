@@ -1,11 +1,12 @@
 function toggleMenu() {
-    const navMenu = document.getElementById("nav-bar");
-    navMenu.classList.toggle("menu-open");
-  }
+  const navMenu = document.getElementById("nav-bar");
+  navMenu.classList.toggle("menu-open");
+}
 
 
 
-  const backToTopButton = document.getElementById('backToTop');
+
+ const backToTopButton = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {

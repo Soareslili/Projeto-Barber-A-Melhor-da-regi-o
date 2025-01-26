@@ -44,7 +44,7 @@ body {
     margin: 20px;
     font-size: 20px;
     transition: 1.5s ease-in-out;
-   
+
 }
 
 .nav-content .nav-bar li a:hover {
@@ -67,7 +67,7 @@ body {
     font-size: 30px;
     color: #F9B012;
     cursor: pointer;
-  }
+}
 
 /* Main */
 
@@ -235,7 +235,7 @@ body {
 
 }
 
-.contact{
+.contact {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -245,8 +245,8 @@ body {
 .modal {
     position: fixed;
     z-index: 1;
-   top:0;
-   left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -262,7 +262,7 @@ body {
     padding: 20px;
     border: 1px solid #888;
     width: 300px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
     margin-left: 40%;
     margin-top: 4rem;
@@ -344,29 +344,400 @@ form button {
 
 .container-contact,
 .contact-section {
-  flex: 1;
-  padding: 30px;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(236, 147, 45, 0.3);
-  border-radius: 10px;
+    flex: 1;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(236, 147, 45, 0.3);
+    border-radius: 10px;
 }
 
 .communication,
 .email-communication {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: left;
-  padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    padding: 10px;
 }
 
 .phone,
 .email {
-  border-bottom: 1px solid #6e6571;
+    border-bottom: 1px solid #6e6571;
 }
 
 .redes-social {
     display: flex;
     align-items: center;
     gap: 20px;
-  }
+}
+
+
+/* Resposividade */
+
+@media (max-width: 768px) {
+
+    .nav-content {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-around;
+        margin-right: 30%;
+        align-items: center;
+        text-transform: capitalize;
+        background-color: #130f0f28;
+        position: absolute;
+    }
+    
+    .logo-barber {
+        margin-right: 30%;
+        width: 80px;
+        height: 60px;
+    }
+    
+    .nav-content .nav-bar {
+        display: none;
+        align-items: center;
+        list-style: none;
+    }
+    
+    .nav-content .nav-bar li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        gap: 15px;
+        font-size: 20px;
+        transition: 1.5s ease-in-out;
+        
+    }
+    
+    .nav-icone {
+        display: none;
+    }
+    
+    .menu-icon {
+        display: flex;
+        font-size: 30px;
+        color: #F9B012;
+        cursor: pointer;
+    }
+    
+    .menu-open {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        top: 120px;
+        background-color: #130f0f28;
+    }
+    
+
+    .container-main {
+        background: url(./img/1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-main {
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        width: 350px;
+       align-items: center;
+       margin-left: 50%;
+        margin-top: 50px;
+    }
+
+    .text-main span {
+        color: #F9B012;
+    }
+
+    .btn-agenda {
+        font-size: 14px;
+        margin-right: 80%;
+        width: 200px;
+        height: 40px;
+        border: none;
+        border-radius: 20px;
+        background-color: #F9B012;
+        cursor: pointer;
+        transition: 1.3s ease-in-out;
+    }
+    
+    .btn-agenda:hover {
+        background: #f8d78f;
+    }
+
+    .modal {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modal-content {
+        background-color: #fefefe;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 300px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        margin-top: 4rem;
+        margin-right: 150%;
+    }
+    
+    .modal-content h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .close {
+        color: #F9B012;
+        font-size: 35px;
+        font-weight: bold;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    form label,
+    form input,
+    form button {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .agenda {
+        background-color: #F9B012;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .agenda:hover {
+        background-color: #f8d78f;
+        color: #000;
+    }
+
+    .container-about {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about {
+        background: url(./img/Barbearia\ -\ Melhor\ atendimento.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-position-y: center;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .icone-barber {
+        width: 50px;
+    }
+    
+    .content-about {
+        width: 800;
+        margin-left: 20%;
+        margin-top: 40px;
+    }
+    
+    .text-about {
+        width: 400px;
+        color: #F9B012;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .text-information {
+        color: #fff;
+        width: 400px;
+        font-size: 15px;
+    
+    }
+    
+    #backToTop {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #F9B012;
+        border: none;
+        border-radius: 10px;
+        width: 80px;
+        height: 40px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    #backToTop:hover {
+        background-color: #f8d78f;
+        transform: scale(1.1);
+    }
+    
+    #backToTop.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Serviço */
+    
+    .Service {
+        background: #1b1515;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    
+    .Service h2 {
+        color: #F9B012;
+        text-align: center;
+        margin-top: 3rem;
+        font-size: 25px;
+        margin-right: 15%;
+    }
+    
+    .Card-service {
+        width: 90vw;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 350px));
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+        margin-right: 20%;
+    }
+    
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 18rem;
+        gap: 10px;
+        margin-top: 3rem;
+        margin-left: 30px;
+        border: 3px solid #F9B012;
+    }
+    
+    .card-img-top {
+        width: 100%;
+    
+    }
+
+    /* Contato */
+    
+    .contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contatos {
+        background-color: #1b1515;
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .contatos h2 {
+        color: #F9B012;
+        text-align: center;
+        font-size: 25px;
+        margin-right: 15%;
+    }
+    
+    .get-in-touch {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        width: 400px;
+        margin-right: 20%;
+    }
+    
+    .container-contact,
+    .contact-section {
+        flex: 1;
+        padding: 30px;
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(236, 147, 45, 0.3);
+        border-radius: 10px;
+    }
+    
+    .communication,
+    .email-communication {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: left;
+        padding: 10px;
+    }
+    
+    .phone,
+    .email {
+        border-bottom: 1px solid #6e6571;
+    }
+    
+    .redes-social {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    
+
+
+}
+
+
+
+
